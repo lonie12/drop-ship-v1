@@ -5,7 +5,7 @@
   "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node server.js",
+    "start": "nodemon server.js",
     "start-dev": "nodemon server.js"
   },
   "repository": {
@@ -19,8 +19,13 @@
   },
   "homepage": "https://github.com/lonie-collab/drop-ship-v1#readme",
   "dependencies": {
+    "@prisma/client": "^3.4.2",
+    "bcrypt": "^5.0.1",
     "express": "^4.17.1",
-    "prisma": "^3.4.2"
+    "jsonwebtoken": "^8.5.1"
   },
-  "type": "module"
+  "type": "module",
+  "devDependencies": {
+    "prisma": "^3.4.2"
+  }
 }
