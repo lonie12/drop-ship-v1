@@ -1,5 +1,5 @@
 // Imported modules from node_modules
-import express from "express";
+import e from "express";
 
 
 // Imported modules from files
@@ -7,10 +7,12 @@ import router from './src/routes/router.js'
 
 
 // the core of express app
-let app = express()
+let app = e()
 
 
 // midllewares
+app.use(e.urlencoded({extended: true}))
+app.use(e.json())
 app.use('/drop-ship/', router)
 
 

@@ -5,6 +5,8 @@ import e from "express"
 // Local Modules
 import route from '../middlewares/route.js'
 import home from '../models/home.js'
+import utilisateur from "../models/utilisateur.js"
+
 export default (() => {
     // Configuration des routes
     let api = e.Router()
@@ -14,5 +16,8 @@ export default (() => {
     // Listes des routes
     // api.route('/home').post(model)
 
+    //Users
+    api.route('/users/login').post(utilisateur.login)
+    api.route('/users/register').post(utilisateur.register)
     return api
 })()
