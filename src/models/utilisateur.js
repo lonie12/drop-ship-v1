@@ -1,6 +1,6 @@
 
 
-export default utilisateur = {
+export default  {
 
     init: (request, response) => {
         // traitements
