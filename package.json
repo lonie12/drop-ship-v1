@@ -1,0 +1,25 @@
+{
+  "name": "drop-ship-v1",
+  "version": "1.0.0",
+  "description": "Systeme de presentation de produits et de gestions des fournisseurs",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lonie-collab/drop-ship-v1.git"
+  },
+  "author": "rbatoulime@gmail.com && akrabalgodwin@gmail.com",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/lonie-collab/drop-ship-v1/issues"
+  },
+  "homepage": "https://github.com/lonie-collab/drop-ship-v1#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "prisma": "^3.4.2"
+  },
+  "type": "module"
+}
