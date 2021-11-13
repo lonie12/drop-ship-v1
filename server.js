@@ -11,6 +11,8 @@ let app = e()
 
 
 // midllewares
+app.use(e.urlencoded({extended: true}))
+app.use(e.json())
 app.use('/drop-ship/', router)
 
 
