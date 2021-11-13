@@ -5,7 +5,6 @@ import e from "express"
 // Local Modules
 import route from '../middlewares/route.js'
 import home from '../models/home.js'
-import categorie from "../models/categorie.js"
 export default (() => {
     // Configuration des routes
     let api = e.Router()
@@ -15,6 +14,5 @@ export default (() => {
     // Listes des routes
     // api.route('/home').post(model)
 
-    api.route('/categorie').get(categorie.ajouter)
     return api
 })()
