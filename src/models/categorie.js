@@ -1,6 +1,6 @@
 
 
-export default categorie = {
+export default  {
 
     init: (request, response) => {
         // traitements

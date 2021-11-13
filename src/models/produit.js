@@ -1,6 +1,6 @@
 
 
-export default produit = {
+export default {
 
     init: (request, response) => {
         // traitements

@@ -1,6 +1,6 @@
 
 
-export default fournisseur = {
+export default  {
 
     init: (request, response) => {
         // traitements
