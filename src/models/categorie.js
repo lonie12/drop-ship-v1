@@ -17,14 +17,14 @@ export default  {
 
 
         // je recupere le libellé de la requete
-        let {libelle} = request.body ;
+        let libelle1 = request.body.libelle ;
 
     
 
-        if(libelle)
-        {   let Categorie = await prisma.categorie.findUnique({
+        if(libelle1)
+        {   let Categorie = await prisma.categorie.findFirst({
                         where:{
-                            libelle: libelle
+                            libelle: libelle1 
                         }
             }) ;
             
@@ -33,7 +33,7 @@ export default  {
                         // crée une categorie 
                     Categorie = await prisma.categorie.create({
                         data : {
-                                libelle : libelle 
+                                libelle : libelle1
                                 } 
                             })
 
