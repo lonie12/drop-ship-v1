@@ -6,6 +6,7 @@ import e from "express"
 import route from '../middlewares/route.js'
 import home from '../models/home.js'
 import categorie from "../models/categorie.js"
+import utilisateur from "../models/utilisateur.js"
 export default (() => {
     // Configuration des routes
     let api = e.Router()
