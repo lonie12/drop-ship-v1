@@ -6,6 +6,7 @@ import e from "express"
 import route from '../middlewares/route.js'
 import home from '../models/home.js'
 import categorie from "../models/categorie.js"
+import utilisateur from "../models/utilisateur.js"
 export default (() => {
     // Configuration des routes
     let api = e.Router()
@@ -15,7 +16,13 @@ export default (() => {
     // Listes des routes
     // api.route('/home').post(model)
 
-    api.route('/categorie/ajouter').get(categorie.ajouter)
+    //Categories
+    api.route('/Categorie/modifier/:categorieid').post(categorie.modifier)
+    api.route('/categorie/ajouter').post(categorie.ajouter)
 
+    //Users
+    api.route('/users/login').post(utilisateur.login)
+    api.route('/users/register').post(utilisateur.register)
+     
     return api
 })()
