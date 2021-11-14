@@ -16,9 +16,13 @@ export default (() => {
     // Listes des routes
     // api.route('/home').post(model)
 
-    api.route('/categorie/ajouter').get(categorie.ajouter)
-     //Users
-     api.route('/users/login').post(utilisateur.login)
-     api.route('/users/register').post(utilisateur.register)
+    //Categories
+    api.route('/Categorie/modifier/:categorieid').post(categorie.modifier)
+    api.route('/categorie/ajouter').post(categorie.ajouter)
+
+    //Users
+    api.route('/users/login').post(utilisateur.login)
+    api.route('/users/register').post(utilisateur.register)
+     
     return api
 })()
