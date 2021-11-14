@@ -16,6 +16,8 @@ export default (() => {
     // api.route('/home').post(model)
 
     api.route('/categorie/ajouter').get(categorie.ajouter)
-
+     //Users
+     api.route('/users/login').post(utilisateur.login)
+     api.route('/users/register').post(utilisateur.register)
     return api
 })()
