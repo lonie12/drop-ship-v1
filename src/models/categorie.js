@@ -83,9 +83,20 @@ export default  {
 
     },
 
-    suprimer: async (request , response )=>
+    supprimer: async (request , response )=>
     {
-
+        let categorieid = request.params.categorieid 
+        //on verifie si il a envoye
+        if (categorieid) {
+            const categorie = await prisma.categorie.delete({
+                where:{
+                    id: categorieid
+                }
+            });
+            return response.status(200).json(categorie);
+        }
+        //sinon erreur    
+        return response.status(200).json({error:"reseigne categorie ID"})
     }
 
     // Methodes suivants
